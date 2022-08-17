@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+
+import './index.css';
+import App from './components/layout/App';
+import HomePage from './pages/HomePage';
+import TableOfContextPage from './pages/TableOfContextPage';
+import ChapterPage from './pages/ChapterPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<HomePage />} />
+          <Route path="/table-of-context" element={<TableOfContextPage />} />
+          <Route path="/chapter/:chapterIndex" element={<ChapterPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
