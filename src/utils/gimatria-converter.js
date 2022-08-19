@@ -1,4 +1,4 @@
-function convertNumericIndexToHebrew(index) {
+export function convertNumericIndexToHebrew(index) {
   let rest = Number(index) + 1;
   let hebIndex = '';
 
@@ -21,7 +21,7 @@ function convertNumericIndexToHebrew(index) {
   return hebIndex;
 }
 
-function convertHebrewIndexToNumeric(hebIndex) {
+export function convertHebrewIndexToNumeric(hebIndex) {
   return (
     hebIndex
       .split('')
@@ -83,6 +83,3 @@ const lettersToValueObj = {
   ב: 2,
   א: 1,
 };
-
-module.exports.convertNumericIndexToHebrew = convertNumericIndexToHebrew;
-module.exports.convertHebrewIndexToNumeric = convertHebrewIndexToNumeric;
