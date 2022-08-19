@@ -11,7 +11,7 @@ function TableOfContextPage() {
   return (
     <main className="my-5">
       <CenteredColumn>
-        <section className="min-h-full flex flex-wrap gap-1.5 max-w-lg">
+        <section className="min-h-full flex flex-wrap justify-center gap-1.5 max-w-lg mx-2">
           {chapterIndexes.map((i) => (
             <ChapterButton chapterIndex={i} key={i} />
           ))}

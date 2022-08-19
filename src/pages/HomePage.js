@@ -19,7 +19,7 @@ function HomePage() {
           href={`/chapter/${monthlyPartitionData.startChapterIndex + 1}`}
         >
           לימוד ל-{getHebrewDate() + "' בחודש"}
-          <span className="text-base font-normal leading-4">
+          <span className="text-base font-normal leading-4 text-black/60">
             ({monthlyPartitionData.rangeStr})
           </span>
         </BigButton>
@@ -28,7 +28,7 @@ function HomePage() {
           href={`/chapter/${weeklyPartitionData.startChapterIndex + 1}`}
         >
           לימוד ליום {getHebrewDay() + ' '}
-          <span className="text-base font-normal leading-4">
+          <span className="text-base font-normal leading-4 text-black/60">
             ({weeklyPartitionData.rangeStr})
           </span>
         </BigButton>
