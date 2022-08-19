@@ -2,12 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+$bg: #fffbeb;
+
+@font-face {
+  font-family: Frank;
+  src: url(./assets/fonts/TaameyFrankCLMMedium/TaameyFrankCLMMedium.eot)
+    format(eot)
+    url(./assets/fonts/TaameyFrankCLMMedium/TaameyFrankCLMMedium.svg)
+    format(svg)
+    url(./assets/fonts/TaameyFrankCLMMedium/TaameyFrankCLMMedium.ttf)
+    format(ttf)
+    url(./assets/fonts/TaameyFrankCLMMedium/TaameyFrankCLMMedium.woff)
+    format(woff)
+    url(./assets/fonts/TaameyFrankCLMMedium/TaameyFrankCLMMedium.woff2)
+    format(woff2);
+}
 #root {
-  @apply bg-amber-50;
-  min-height: 100vh;
+  background-color: #fffbeb;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 
-  .main {
+  .font-tanach {
+    font-family: Frank;
   }
 }
+
+@mixin scrollbar($bg-scrollbar: $bg) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: $bg-scrollbar;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid $bg-scrollbar;
+    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    // @apply bg-lime-400;
+    background-color: #bbb;
+  }
+}
+
+.white-bg-scrollbar {
+  @include scrollbar(#fff);
+}
+
+@include scrollbar();

@@ -17,7 +17,7 @@ root.render(
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
           <Route path="/table-of-context" element={<TableOfContextPage />} />
-          <Route path="/chapter/:chapterIndex" element={<ChapterPage />} />
+          <Route path="/chapter/:chapterNumber" element={<ChapterPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

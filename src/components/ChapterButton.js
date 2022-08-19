@@ -12,12 +12,12 @@ function ChapterButton({ chapterIndex, ...props }) {
   }…`;
 
   const navigate = useNavigate();
-  const onClick = () => navigate(`/chapter/${chapterIndex}`);
+  const onClick = () => navigate(`/chapter/${chapterIndex + 1}`);
 
   return (
-    <Tooltip title={chapterBegining}>
+    <Tooltip title={chapterBegining} titleClassName="font-tanach text-lg">
       <button
-        className="w-11 h-11 bg-lime-300 rounded-full hover:outline hover:outline-amber-300 hover:outline-offset-2 active:outline-lime-400 active:outline-offset-0"
+        className="w-11 h-11 bg-lime-300 rounded-full hover:outline hover:outline-amber-300 hover:outline-offset-2 active:outline-amber-400 active:outline-offset-0"
         onClick={onClick}
         {...props}
       >

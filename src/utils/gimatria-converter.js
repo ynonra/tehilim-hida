@@ -1,5 +1,5 @@
 function convertNumericIndexToHebrew(index) {
-  let rest = index + 1;
+  let rest = Number(index) + 1;
   let hebIndex = '';
 
   while (rest > 0) {
@@ -18,7 +18,6 @@ function convertNumericIndexToHebrew(index) {
       }
     });
   }
-
   return hebIndex;
 }
 

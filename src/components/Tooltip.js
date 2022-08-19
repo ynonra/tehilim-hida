@@ -1,7 +1,7 @@
 import React from 'react';
 import { Transition } from '@headlessui/react';
 
-function Tooltip({ children, title, ...props }) {
+function Tooltip({ children, title, titleClassName, ...props }) {
   const [show, setShow] = React.useState(false);
   const timeoutId = React.useRef(null);
 
@@ -33,7 +33,7 @@ function Tooltip({ children, title, ...props }) {
         leaveTo="opacity-0"
       >
         <span
-          className="absolute bottom-full left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-800/80 rounded text-white whitespace-nowrap"
+          className={`absolute bottom-full left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-800/80 rounded text-white whitespace-nowrap ${titleClassName}`}
           //   style={{ display: show ? '' : 'none' }}
         >
           {title}
